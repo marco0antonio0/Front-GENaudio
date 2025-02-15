@@ -9,10 +9,42 @@ const config: Config = {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      screens: {
+        'sm': { min: '639px' },
+        // => @media (min-width: 639px) { ... }
+  
+        'md': { min: '767px' },
+        // => @media (min-width: 767px) { ... }
+  
+        'lg': { min: '1023px' },
+        // => @media (min-width: 1023px) { ... }
+  
+        'xl': { min: '1279px' },
+        // => @media (min-width: 1279px) { ... }
+  
+        '2xl': { min: '1535px' },
+        // => @media (min-width: 1535px) { ... }
+
+        'smi': { max: '639px' },
+        // => @media (max-width: 639px) { ... }
+  
+        'mdi': { max: '767px' },
+        // => @media (max-width: 767px) { ... }
+  
+        'lgi': { max: '1023px' },
+        // => @media (max-width: 1023px) { ... }
+  
+        'xli': { max: '1279px' },
+        // => @media (max-width: 1279px) { ... }
+  
+        '2xli': { max: '1535px' },
+        // => @media (max-width: 1535px) { ... }
       },
     },
   },
