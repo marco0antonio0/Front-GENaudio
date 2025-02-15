@@ -21,14 +21,14 @@ export default function Sobre() {
     <div
       className={`${geistSans.variable} ${geistMono.variable} grid min-h-screen py-3 pb-20 gap-16 sm:px-10  font-[family-name:var(--font-geist-sans)]`}
     >
-        <div className="flex flex-col max-w-[1000px]">
+        <div className="flex flex-col max-w-[1000px] smi:px-10">
         <h1 className="m-auto mt-[10px] text-[7mm] font-semibold text-[#8287eb] smi:text-[6mm]">Visão geral da nossa historia</h1>
         <h1 className="m-auto mt-[0] text-[10mm] font-semibold text-black text-center smi:text-[8mm]">Crie audios facilmente em poucos cliques</h1>
         <span className="m-auto mt-[10px] text-lg font-normal opacity-65 text-black text-justify">Você pode usar nosso gerador de audios personalizados de maneira facil. Vamos lá!</span>
         <img
         alt="HeroUI hero Image"
         src="/promo/walpaper.png"
-        className="w-[100%] h-auto rounded-3xl mt-5 mb-5"
+        className="w-[100%] h-auto rounded-3xl mt-5 mb-5 smi:rounded-lg"
         />
         <p className="text-lg text-justify">
         Desde o início, nossa missão tem sido simplificar a criação de áudios personalizados, tornando essa tecnologia acessível para todos. Com apenas alguns cliques, você pode transformar qualquer texto em uma narração profissional, sem complicações.
