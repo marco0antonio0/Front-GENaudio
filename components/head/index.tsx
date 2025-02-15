@@ -90,13 +90,6 @@ export default function NavbarComponent() {
             Sobre
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/produto" className={`${
-              isActive("/produto") ? "text-primary" : "text-foreground"
-            }`}>
-            produto
-          </Link>
-        </NavbarItem>
       </NavbarContent>
       {dataUser.isLogin?null:
       <NavbarContent justify="end">
