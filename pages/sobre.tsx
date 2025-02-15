@@ -41,9 +41,14 @@ Vamos começar? Transforme suas palavras em voz agora mesmo! 🚀🎙️
         <h1 className="m-auto ml-0 mt-[10px] text-[7mm] font-semibold text-[#8287eb] smi:text-[6mm]">Criadores do GENAudio</h1>
         <div className="h-2"></div>
         <div className="flex flex-wrap flex-row gap-3">
-        <UserShowElement name="Marco Antonio" username="marco0antonio0" src="https://github.com/marco0antonio0.png?size=100px" text="Entusiasta da tecnologia e inovação, sempre em busca de soluções eficientes e criativas no desenvolvimento de software."/>
-        <UserShowElement name="Elias Pacheco" username="EliasPacheco" src="https://github.com/EliasPacheco.png?size=100px" text="Desenvolvedor de software focado em criar experiências digitais inteligentes e impactantes, unindo tecnologia e criatividade. 🚀"/>
+        <UserShowElement url="https://github.com/marco0antonio0" name="Marco Antonio" username="marco0antonio0" src="https://github.com/marco0antonio0.png?size=100px" text="Entusiasta da tecnologia e inovação, sempre em busca de soluções eficientes e criativas no desenvolvimento de software."/>
+        <UserShowElement url="https://github.com/EliasPacheco" name="Elias Pacheco" username="EliasPacheco" src="https://github.com/EliasPacheco.png?size=100px" text="Desenvolvedor de software focado em criar experiências digitais inteligentes e impactantes, unindo tecnologia e criatividade. 🚀"/>
         </div>
+        <p className="text-lg text-justify mt-10">
+        A acessibilidade e a inovação caminham juntas no GENAudio. Transforme qualquer texto em narrações envolventes e naturais com apenas alguns cliques.
+
+Crie áudios para treinamentos, vídeos explicativos, conteúdos educacionais ou qualquer outra necessidade. Com nossa plataforma, a sua voz ganha vida de forma simples e intuitiva. Comece agora mesmo! 🎧✨
+        </p>
         </div>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
