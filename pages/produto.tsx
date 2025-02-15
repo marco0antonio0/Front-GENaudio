@@ -96,11 +96,17 @@ const Produto: React.FC = () => {
                 placeholder="Selecione uma voz"
                 selectedKey={voice}
                 onSelectionChange={(key) => {
-                  setVoice(key.toString());
+                  if (typeof key === "string") {
+                    setVoice(key);
+                  } else if (key instanceof Set) {
+                    setVoice(Array.from(key)[0] || "");
+                  }
                   if (errors.voice) setErrors((prev) => ({ ...prev, voice: undefined }));
                 }}
               >
-                {(voice) => <SelectItem key={voice.key}>{voice.label}</SelectItem>}
+              {voices.map(({ key, label }) => (
+                <SelectItem key={key} value={key}>{label}</SelectItem>
+              ))}
               </Select>
               {errors.voice && <p className="text-red-500 text-sm mt-1">{errors.voice}</p>}
             </div>
@@ -113,11 +119,17 @@ const Produto: React.FC = () => {
                 placeholder="Selecione a velocidade"
                 selectedKey={speed}
                 onSelectionChange={(key) => {
-                  setSpeed(key.toString());
+                  if (typeof key === "string") {
+                    setSpeed(key);
+                  } else if (key instanceof Set) {
+                    setSpeed(Array.from(key)[0] || "");
+                  }
                   if (errors.speed) setErrors((prev) => ({ ...prev, speed: undefined }));
                 }}
               >
-                {(speed) => <SelectItem key={speed.key}>{speed.label}</SelectItem>}
+                {speeds.map(({ key, label }) => (
+                <SelectItem key={key} value={key}>{label}</SelectItem>
+              ))}
               </Select>
               {errors.speed && <p className="text-red-500 text-sm mt-1">{errors.speed}</p>}
             </div>
