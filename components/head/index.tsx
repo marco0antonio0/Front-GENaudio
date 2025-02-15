@@ -52,6 +52,7 @@ export default function NavbarComponent() {
     {name:"Inicio",ref:"/"},
     {name:"Planos",ref:"/planos"},
     {name:"Sobre",ref:"/sobre"},
+    {name:"Produto",ref:"/produto"},
   ];
   const router = useRouter()
   const isActive = (path: string) => router.pathname === path;
@@ -87,6 +88,13 @@ export default function NavbarComponent() {
               isActive("/sobre") ? "text-primary" : "text-foreground"
             }`}>
             Sobre
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/produto" className={`${
+              isActive("/produto") ? "text-primary" : "text-foreground"
+            }`}>
+            produto
           </Link>
         </NavbarItem>
       </NavbarContent>
