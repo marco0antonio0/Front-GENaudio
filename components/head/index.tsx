@@ -52,6 +52,7 @@ export default function NavbarComponent() {
     {name:"Inicio",ref:"/"},
     {name:"Planos",ref:"/planos"},
     {name:"Sobre",ref:"/sobre"},
+    {name:"Produto",ref:"/produto"},
   ];
   const router = useRouter()
   const isActive = (path: string) => router.pathname === path;

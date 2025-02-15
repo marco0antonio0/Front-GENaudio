@@ -1,4 +1,5 @@
 import {default as ImageNext} from "next/image";
+import { useRouter } from "next/navigation";
 
 import localFont from "next/font/local";
 import UserShowElement from "@/components/userShowElement";
@@ -16,6 +17,7 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div
       className={`${geistSans.variable} ${geistMono.variable} grid min-h-screen py-3 pb-20 gap-16 sm:px-10  font-[family-name:var(--font-geist-sans)]`}
@@ -26,12 +28,18 @@ export default function Home() {
         <h1 className="m-auto mt-[0] text-[10mm] font-semibold text-black text-center smi:text-[8mm]">Em poucos cliques crie audios facilmente </h1>
         <span className="m-auto mt-[10px] text-lg font-normal opacity-65 text-black text-justify">Você pode usar nosso gerador de audios personalizados de maneira facil. Vamos lá!</span>
         <div className="flex flex-row m-auto mt-8 gap-3">
-        <Button color="primary" variant="shadow" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]">
-        Comece gratuitamente
-      </Button>
-      <Button color="primary" variant="ghost" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]">
-        Saiba mais
-      </Button>
+          <Button
+            color="primary"
+            variant="shadow"
+            className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]"
+            onClick={() => router.push("/produto")}
+          >
+            Comece gratuitamente
+          </Button>
+          <Button onClick={() => router.push("/sobre")}
+            color="primary" variant="ghost" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]">
+            Saiba mais
+          </Button>
         </div>
         <div className="flex flex-row gap-8 mt-16 mdi:flex-col">
           <div className="w-[50%] mdi:w-[100%]">
@@ -116,16 +124,3 @@ Crie áudios para treinamentos, vídeos explicativos, conteúdos educacionais ou
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
