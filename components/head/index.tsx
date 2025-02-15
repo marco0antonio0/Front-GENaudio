@@ -57,7 +57,7 @@ export default function NavbarComponent() {
   const router = useRouter()
   const isActive = (path: string) => router.pathname === path;
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}  isBlurred={true}>
+    <Navbar onMenuOpenChange={setIsMenuOpen}  isBlurred={true} shouldHideOnScroll>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
