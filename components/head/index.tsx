@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import LoginModal from "@/components/modal/LoginModal";
+import CadastroModal from "@/components/modal/CadastroModal";
 
 export const Logo = () => {
     const r = useRouter()
@@ -37,6 +39,8 @@ import {
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = React.useState(false);
+  const [isCadastroModalOpen, setIsCadastroModalOpen] = React.useState(false);
   var dataUser = {
     image:"https://i.pravatar.cc/150?u=a042581f4e29026704d",
     email:"zoey@example.com",
@@ -88,14 +92,18 @@ export default function NavbarComponent() {
       </NavbarContent>
       {dataUser.isLogin?null:
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+        <div className="hidden lg:flex">
+          <Button className="text-blue-600" variant="light" onClick={() => setIsLoginModalOpen(true)}>
+            Login
+          </Button>
+          <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
+        </div>
+        <div className="hidden lg:flex">
+          <Button className="bg-blue-200 text-blue-700" onClick={() => setIsCadastroModalOpen(true)}>
             Sign Up
           </Button>
-        </NavbarItem>
+          <CadastroModal isOpen={isCadastroModalOpen} onClose={() => setIsCadastroModalOpen(false)} />
+        </div>
       </NavbarContent>}
       <NavbarMenu>
         {menuItems.map((item, index) => {
