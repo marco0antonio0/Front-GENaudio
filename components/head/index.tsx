@@ -105,12 +105,12 @@ export default function NavbarComponent() {
           <CadastroModal isOpen={isCadastroModalOpen} onClose={() => setIsCadastroModalOpen(false)} />
         </div>
       </NavbarContent>}
-      <NavbarMenu>
+      <NavbarMenu className="w-[100%] h-[100%] py-10">
         {menuItems.map((item, index) => {
             return (
                 <NavbarMenuItem key={`${item}-${index}`}>
                   <Link
-                    className={`w-[100%] ${
+                    className={`w-[100%] h-[100%] text-2xl ${
                     isActive(item.ref) ? "text-primary" : "text-foreground"
                   }`}
                     href={item.ref}
