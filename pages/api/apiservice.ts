@@ -36,6 +36,40 @@ export async function generateAudioAPI(texto: string, velocidade: string, voz: s
   }
 }
 
+export async function generateOuvirAudioAPI(texto: string, velocidade: string, voz: string) {
+  try {
+    const response = await fetch("https://api-genaudio.dirrocha.com/gerar-audio", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        modo: "play",
+        texto: texto,
+        velocidade: velocidade,
+        voz: voz, // Passando a voz corretamente
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erro ao gerar o áudio. Código: ${response.status}`);
+    }
+
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    // Criando um elemento de áudio e reproduzindo
+    const audio = new Audio(url);
+    audio.play();
+
+    return { success: true };
+  } catch (error) {
+    console.error("Erro ao gerar o áudio:", error);
+    return { success: false };
+  }
+}
+
+
 export async function getSpeedsAPI() {
   try {
     const response = await fetch("https://api-genaudio.dirrocha.com/listar-velocidades");
