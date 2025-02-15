@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import Head from "@/components/head";
+import NavbarComponent from "@/components/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +19,6 @@ export default function Home() {
     <div
       className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-sans)]`}
     >
-      <Head/>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         
       </main>
