@@ -16,7 +16,7 @@ const geistMono = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return <>
    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 pb-20 gap-16 sm:py-20 font-[family-name:var(--font-geist-sans)]`}
+      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 pb-20 gap-16 sm:py-0 font-[family-name:var(--font-geist-sans)]`}
     >
   <NavbarComponent/>
   <Component {...pageProps} />
