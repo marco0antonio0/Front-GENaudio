@@ -10,7 +10,6 @@ import {
     Link,
 } from "@heroui/react";
 import { JSX, SVGProps } from "react";
-import { User } from "lucide-react";
 
 export const MailIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
     <svg
@@ -81,7 +80,10 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             <ModalContent>
                 {() => (
                     <>
-                        <ModalHeader className="flex flex-col gap-1">Sign Up</ModalHeader>
+                        <ModalHeader className="flex flex-col gap-1">
+                            <img src="/promo/4957136.jpg" alt="" className="w-[200px] m-auto"/>
+                            <h1>Sign Up</h1>
+                        </ModalHeader>
                         <ModalBody>
                             <Input
                                 endContent={<UserIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />}
