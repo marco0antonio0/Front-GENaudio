@@ -62,7 +62,10 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             <ModalContent>
                 {() => (
                     <>
-                        <ModalHeader className="flex flex-col gap-1">Conecte-se</ModalHeader>
+                        <ModalHeader className="flex flex-col gap-1">
+                        <img src="/promo/4957136.jpg" alt="" className="w-[200px] m-auto"/>
+                        <h1>Conecte-se</h1>
+                        </ModalHeader>
                         <ModalBody>
                             <Input
                                 endContent={<MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />}
